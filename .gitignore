@@ -228,6 +228,14 @@ TSWLatexianTemp*
 # KBibTeX
 *~[0-9]*
 
+#LEd
+*.undo
+*.gpr
+*.lpr
+*.bat
+*.sh
+*.cmd
+
 # auto folder when using emacs and auctex
 ./auto/*
 *.el
