@@ -235,6 +235,7 @@ TSWLatexianTemp*
 *.bat
 *.sh
 *.cmd
+*.db
 
 # auto folder when using emacs and auctex
 ./auto/*
