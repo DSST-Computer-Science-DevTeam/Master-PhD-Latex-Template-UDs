@@ -1,0 +1,61 @@
+% *************** Nouvelle taille *******************************
+\newcommand{\timesContentFontSize}{\fontsize{13pt}{18pt}}
+
+%--- Niveau 1: section
+ 
+\newcommand{\FonteSectionI}{\sffamily\bfseries\raggedright\fontsize{16pt}{20.7pt}\selectfont}%
+
+%\renewcommand{\thesection}{\arabic{section}}%
+\renewcommand{\section}{%
+   \par\vspace{20pt}
+   %\hrule height 0.5mm
+   \vspace{1.5mm}
+   \renewcommand{\@seccntformat}[1]{\fontsize{16pt}{20.7pt}\thesection.\hspace{0.7em}}
+   \@startsection{section}  % nom de l'inter
+   {1}%                     % niveau de l'inter
+   {0pt}%                   % l'indentation du titre et du texte suivant
+   {4pt}% beforeskip %
+   {6pt}% afterskip
+   {\FonteSectionI}%        % style
+}
+
+%--- Niveau 2: sous-section
+\newcommand{\FonteSectionII}{\sffamily\bfseries\raggedright\fontsize{15pt}{19.4pt}\selectfont}%
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}%
+\renewcommand{\subsection}{%
+\vspace{3mm}
+  \renewcommand{\@seccntformat}[1]%
+               {{\fontsize{15pt}{19.4pt}\thesubsection.\hspace{0.7em}}}%
+  \@startsection%
+   {subsection}%            % nom de l'inter
+   {2}%                     % niveau de l'inter
+   {0pt}%                   % l'indentation du titre et du texte suivant
+   {3pt}
+   {5pt}
+   {\FonteSectionII}}%      % style
+
+%--- Niveau 3: sous-sous-section 
+
+\newcommand{\FonteSectionIII}{\sffamily\bfseries\fontsize{14pt}{18.2pt}\raggedright\selectfont}%
+
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}%
+\renewcommand{\subsubsection}{%
+\vspace{2mm}
+  \renewcommand{\@seccntformat}[1]{%
+               {\sffamily\bfseries\fontsize{14pt}{18.2pt}\thesubsubsection.\hspace{0.7em}}}%
+  \@startsection%
+   {subsubsection}%         % nom de l'inter
+   {3}%                     % niveau de l'inter
+   {0pt}%                   % l'indentation du titre et du texte suivant
+   {3pt}
+   {3pt}
+   {\FonteSectionIII}}%     % style
+
+% <Alinéas>----------------------------------------------------------------
+
+% Disable single lines at the start of a paragraph
+\clubpenalty = 10000
+% Disable single lines at the end of a paragraph 
+\widowpenalty = 10000
+\displaywidowpenalty = 10000

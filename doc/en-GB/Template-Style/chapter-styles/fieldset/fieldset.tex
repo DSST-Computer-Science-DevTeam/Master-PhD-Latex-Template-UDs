@@ -1,0 +1,39 @@
+
+\makechapterstyle{fieldset}{%
+    \renewcommand{\chapnamefont}{\LARGE\sffamily}%
+    \renewcommand{\chapnumfont}{\fontsize{80pt}{0pt}\sffamily}%
+    \renewcommand{\chaptitlefont}{\fontsize{25pt}{30pt}\Huge\bfseries}%
+	% Impression du texte chapitre ou annexe
+    \renewcommand{\printchaptertitle}[1]{%
+		  \vspace*{-45.3pt}
+		  \begin{center}
+			  \chaptitlefont %\hrule height 1.5pt
+			  \begin{center}\textcolor{black}{\textsc{{##1}}}\end{center}
+			  \vspace{-2mm}
+			  \textcolor{black}{\hrule height 2.5pt}%
+		  \end{center}
+        }%
+		\renewcommand{\printchaptername}{%
+			\vspace*{-100.3pt}
+		}
+	% Impression du numéro de chapitre
+	\renewcommand{\printchapternum}{%
+		\begin{center}
+			\chapnumfont{\textcolor{blue}{$\mathpzc{\thechapter}$}}
+		\end{center}
+		\vspace{0mm}
+		\parbox[c]{.07\textwidth}{
+			\centering
+			\textcolor{black}{\hrule height 2.5pt}
+		}
+		\parbox[c]{.2\textwidth}{
+			\centering
+			\textcolor{blue}{\textsc{\myPrintChapterLabel{\thechapter}}}
+		}
+		\parbox[c]{.71\textwidth}{
+			\centering
+			\textcolor{black}{\hrule height 2.5pt}
+		}
+		\vspace{0mm}
+	}%
+}

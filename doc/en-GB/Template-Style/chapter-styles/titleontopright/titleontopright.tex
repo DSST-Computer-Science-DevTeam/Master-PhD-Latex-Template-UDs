@@ -1,0 +1,25 @@
+\makechapterstyle{titleontopright}{%
+    \renewcommand{\chapnamefont}{\LARGE\sffamily}%
+    \renewcommand{\chapnumfont}{\fontsize{60pt}{0pt}\sffamily\bfseries}%
+    \renewcommand{\chaptitlefont}{\Huge\bfseries}%
+	% Impression du texte chapitre ou annexe
+    \renewcommand{\printchaptertitle}[1]{%
+		  \vspace*{-28.3pt}
+        \chaptitlefont \hrule height 1.0pt
+        \begin{flushright}\textcolor{black}{{##1}}\end{flushright}
+		  \hrule height 1.0pt%
+        }%
+		\renewcommand{\printchaptername}{%
+			\begin{flushright}
+				\normalsize \chapnamefont
+				$~\mathit{\myPrintChapterLabel{\thechapter}}$
+			\end{flushright}
+		}
+	% Impression du numéro de chapitre
+    \renewcommand{\printchapternum}{%
+        %\begin{flushright}
+				\vspace*{-40.3pt}  
+				\hspace{15,0cm}\chapnumfont{$\mathit{\thechapter}$}
+		  %\end{flushright}%
+        }%
+}

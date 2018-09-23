@@ -1,0 +1,63 @@
+\newcommand{\myBibliography}[2]{
+	\bibliographystyle{#1}
+	\bibliography{#2}
+	\myCleanStarChapterEnd
+}
+
+% Bibligraphie
+\renewenvironment{thebibliography}[1]{%BEGIN
+   \myChapterStar{\myBibliographyTitle}{}{true}\label{biblio}%
+   \begin{myBiblio}
+  }{%END
+   \end{myBiblio}
+}
+
+\def\bibi[#1]{\item[\@biblabel{#1}\hfill]} % @ special
+\newenvironment{myBiblio}{%BEGIN
+   \list{}{
+         \usecounter{enumiv}%
+         \let\p@enumiv\@empty
+         \renewcommand\theenumiv{\arabic{enumiv}}%
+         \renewcommand\newblock{\hskip .11em \@plus.33em \@minus.07em}%
+         %% dimensions horizontales
+         \setlength{\leftmargin}{0mm}%%%
+         %\setlength{\itemindent}{-3mm}%%%
+         \setlength{\labelsep}{2mm}%%%
+         \setlength{\labelwidth}{10mm}%%%
+         %% dimensions verticales
+          \setlength{\topsep}{0pt}%
+          \setlength{\parskip}{6pt}%
+          \setlength{\itemsep}{5pt}%
+          \setlength{\partopsep}{0pt}%
+          \setlength{\parsep}{3pt}%
+         \sloppy\clubpenalty4000\widowpenalty4000%
+         \sfcode`\.=\@m
+         }%
+  }{%END
+      \def\@noitemerr{\@latex@warning{Empty 'thebibliography' environment}}
+      %\FonteTexte%
+      \endlist%
+}
+
+% Tableaux
+\usepackage[format=hang,font=large,labelfont=bf,textfont=it,skip=5pt,labelsep=endash]{caption}
+\captionsetup[table]{name=Table,position=top}
+\captionsetup[figure]{name=Figure,position=bottom}
+\newcommand{\tocsetted}{false}
+
+% Des redéfinitions supplémentaires
+\let\oldmainmatter=\mainmatter
+\renewcommand{\mainmatter}{
+	\oldmainmatter
+	% Numéroter les chapitres en chiffres romains
+	\renewcommand{\thechapter}{\Roman{chapter}}
+	% Numeroter les tableaux en chiffres romains
+	\renewcommand{\thetable}{\thechapter.\Roman{table}}
+}
+
+\let\oldappendix=\appendix
+\renewcommand{\appendix}{
+	\oldappendix
+	% Numeroter les tableaux en chiffres romains
+	\renewcommand{\thetable}{\thechapter.\Roman{table}}
+}

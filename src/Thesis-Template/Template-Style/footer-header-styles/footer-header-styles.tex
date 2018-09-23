@@ -1,0 +1,26 @@
+\makeevenhead{ruled}{\small\textsc{\rightmark}}{}{\thepage}
+\makeoddhead{ruled}{\small\textsc{\rightmark}}{}{\thepage}
+\makeoddfoot{ruled}{\hrule height 0.3mm \small\textsc{\phdthesislabel}}{}{\small\textsc{\studentlab}}
+\makeevenfoot{ruled}{\hrule height 0.3mm \small\textsc{\phdthesislabel}}{}{\small\textsc{\studentlab}}
+
+% Notes de bas de page
+%\newcommand{\FonteNoteBasPage}{\footnotesize\sffamily}
+%\renewcommand{\footnotesize}{\FonteNoteBasPage}
+\addtolength{\skip\footins}{6pt} 
+
+\renewcommand{\footnoterule}{%
+	\par %\vspace*{-12.3pt}
+	\noindent\rule{3.5cm}{0.6pt}\vspace*{6pt} 
+}
+
+\setlength{\footnotesep}{3pt} % Espace vertical avant chaque note (strut)
+
+\newcommand{\@Myfnmark}{
+      \mbox{\fontsize{8}{11}\sffamily\arabic{footnote}. }%
+}
+
+\renewcommand{\@makefntext}[1]{%
+      \noindent\@Myfnmark#1%
+}%
+
+\def\@thefnmark{\arabic{footnote}}

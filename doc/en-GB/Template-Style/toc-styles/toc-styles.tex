@@ -1,0 +1,25 @@
+% *************** Style table de matière et listes de figures ***************
+\settocdepth{subsubsection}
+\setsecnumdepth{subsubsection}
+\maxsecnumdepth{subsubsection}
+\settocdepth{subsubsection}
+\maxtocdepth{subsubsection}
+
+\renewcommand{\chapternumberline}[1]{
+% Impression du texte chapitre ou annexe
+\hspace{-0.4cm}\textbf{
+	$\mathit{\myPrintChapterLabel{#1}}$
+	$\mathpzc{{#1}}~\RHD$}
+}
+
+\newcommand{\lof}{false}
+\renewcommand{\numberline}[1]{
+\ifthenelse{\equal{\lof}{false}}{\hspace{-0.6cm}$\mathrm{{#1}}$ -} {$\mathrm{{#1}}$ -}
+}
+
+\let\oldcontentsline=\contentsline
+\renewcommand{\contentsline}[4]{
+	\vspace{0.8mm}
+	\oldcontentsline{#1}{#2}{#3}{#4}
+	\vspace{0.8mm}
+}

@@ -1,0 +1,360 @@
+% Quelques raccourcis utiles
+% *************** Nouvelles Commandes ***************
+\newcommand{\myChapterLabel}{Chapter}
+\newcommand{\myAppendixLabel}{Appendix}
+\newcommand{\lifa}{Laboratoire d'Informatique Fondamentale et Appliquée (LIFA)}
+\newcommand{\myBibliographyTitle}{Bibliography}
+\newcommand{\losname}{List of Symbols}
+\newcommand{\loaname}{List of Acronyms}
+
+\newcommand{\doctypethesis}{Thèse de Doctorat en}
+\newcommand{\doctypemaster}{Mémoire de Master en}
+\newcommand{\doctype}{\ifthenelse{\equal{\doclevel}{\master}}{\doctypemaster}{\doctypethesis}}
+\newcommand{\phd}{PhD}
+\newcommand{\master}{Master}
+\newcommand{\doclevel}{\phd}
+\newcommand{\level}[1]{
+	\renewcommand{\doclevel}{#1}
+}
+\newcommand{\phdthesislabel}{\doctype $~$ \studentspeciality $~$, Université de Dschang}
+\newcommand{\studentspeciality}{\computerScience}
+\newcommand{\speciality}[1]{
+	\renewcommand{\studentspeciality}{#1}
+}
+\newcommand{\computerScience}{Informatique}
+\newcommand{\mathematics}{Mathématiques}
+\newcommand{\studentlab}{LIFA}
+\newcommand{\lab}[1]{
+	\renewcommand{\studentlab}{#1}
+}
+
+% Environnement personnalisé de description
+\newcommand{\myDescription}[2]{
+\par\vspace{0.35cm}\noindent\textbf{#1}
+\begin{list}{}{}
+	\item \noindent #2
+\end{list}
+\vspace{2pt}
+}
+
+\newcommand{\myTableOfContents}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\contentsname}{#1}}
+	\addcontentsline{toc}{section}{\myNumberLine{\contentsname}}
+	\renewcommand{\leftmark}{\contentsname}
+	\renewcommand{\rightmark}{\contentsname}
+	\tableofcontents*
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myTableOfContentsStar}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\contentsname}{#1}}
+	\renewcommand{\leftmark}{\contentsname}
+	\renewcommand{\rightmark}{\contentsname}
+	\tableofcontents*
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfSymbols}[1]{
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\losname}{#1}}
+	\myChapterStar{\losname}{}{section}
+	\input{list-of-symbols}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfSymbolsStar}[1]{
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\losname}{#1}}
+	\myChapterStar{\losname}{}{false}
+	\input{list-of-symbols}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfAcronyms}[1]{
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\loaname}{#1}}
+	\myChapterStar{\loaname}{}{section}
+	\input{list-of-acronyms}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfAcronymsStar}[1]{
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\loaname}{#1}}
+	\myChapterStar{\loaname}{}{false}
+	\input{list-of-acronyms}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfFigures}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\listfigurename}{#1}}
+	\addcontentsline{toc}{section}{\myNumberLine{\listfigurename}}
+	\renewcommand{\leftmark}{\listfigurename}
+	\renewcommand{\rightmark}{\listfigurename}
+	\renewcommand{\lof}{true}
+	\listoffigures*
+	\renewcommand{\lof}{false}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfFiguresStar}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\listfigurename}{#1}}
+	\renewcommand{\leftmark}{\listfigurename}
+	\renewcommand{\rightmark}{\listfigurename}
+	\renewcommand{\lof}{true}
+	\listoffigures*
+	\renewcommand{\lof}{false}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfTables}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\listtablename}{#1}}
+	\addcontentsline{toc}{section}{\myNumberLine{\listtablename}}
+	\renewcommand{\leftmark}{\listtablename}
+	\renewcommand{\rightmark}{\listtablename}
+	\renewcommand{\lof}{true}
+	\listoftables*
+	\renewcommand{\lof}{false}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfTablesStar}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\listtablename}{#1}}
+	\renewcommand{\leftmark}{\listtablename}
+	\renewcommand{\rightmark}{\listtablename}
+	\renewcommand{\lof}{true}
+	\listoftables*
+	\renewcommand{\lof}{false}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myChapter}[2]{
+	\chapter[#2]{#1}
+}
+
+\newcommand{\shortTitle}{}
+
+\newcommand{\mySaveMarks}{
+	\let\oldleftmark=\leftmark
+	\let\oldrightmark=\rightmark
+}
+
+\newcommand{\myNumberLine}[1]{
+	\hspace{-0.55cm}#1
+}
+
+\newcommand{\myChapterNumberLine}[1]{
+	\hspace{-0.25cm}#1
+}
+
+\newcommand{\myChapterStar}[3]{
+	\mySaveMarks
+	\ifthenelse{\equal{#2}{}}
+	{\renewcommand{\shortTitle}{#1}}
+	{\renewcommand{\shortTitle}{#2}}
+	\renewcommand{\leftmark}{\shortTitle}
+	\renewcommand{\rightmark}{\shortTitle}
+	\chapter*{#1}
+	\ifthenelse{\equal{#3}{false}}
+	{}
+	{
+		\ifthenelse{\equal{#3}{}}
+		{\addcontentsline{toc}{chapter}{\myChapterNumberLine{\shortTitle}}}
+		{
+			\ifthenelse{\equal{#3}{true}}
+			{\addcontentsline{toc}{chapter}{\myChapterNumberLine{\shortTitle}}}
+			{
+				\ifthenelse{\equal{#3}{chapter}}
+				{\addcontentsline{toc}{#3}{\myChapterNumberLine{\shortTitle}}}
+				{\addcontentsline{toc}{#3}{\myNumberLine{\shortTitle}}}
+			}
+		}
+	}
+}
+
+\newcommand{\mySection}[2]{
+	\resumecontents[chapters]
+	\ifthenelse{\equal{#2}{}}
+	{\section{#1}}
+	{\section[#2]{#1}}
+	\hrule height 0.5mm
+	\vspace{5mm}
+	\stopcontents[chapters]
+}
+
+\newcommand{\mySectionStar}[3]{
+	\resumecontents[chapters]
+	\ifthenelse{\equal{#2}{}}
+	{\renewcommand{\shortTitle}{#1}}
+	{\renewcommand{\shortTitle}{#2}}
+	\renewcommand{\rightmark}{\shortTitle}
+	\section*{#1}
+	\hrule height 0.5mm
+	\vspace{5mm}
+	\ifthenelse{\equal{#3}{false}}
+	{}
+	{
+		\ifthenelse{\equal{#3}{}}
+		{\addcontentsline{toc}{section}{\myNumberLine{\shortTitle}}}
+		{
+			\ifthenelse{\equal{#3}{true}}
+			{\addcontentsline{toc}{section}{\myNumberLine{\shortTitle}}}
+			{
+				\ifthenelse{\equal{#3}{chapter}}
+				{\addcontentsline{toc}{#3}{\myChapterNumberLine{\shortTitle}}}
+				{\addcontentsline{toc}{#3}{\myNumberLine{\shortTitle}}}
+			}
+		}
+	}
+	\stopcontents[chapters]
+}
+
+\newcommand{\mySubSection}[2]{
+	\ifthenelse{\equal{\minitoclevel}{section}}{}
+	{\resumecontents[chapters]}
+	\ifthenelse{\equal{#2}{}}
+	{\subsection{#1}}
+	{\subsection[#2]{#1}}
+	\stopcontents[chapters]
+}
+
+\newcommand{\mySubSectionStar}[3]{
+	\ifthenelse{\equal{\minitoclevel}{section}}{}
+	{\resumecontents[chapters]}
+	\ifthenelse{\equal{#2}{}}
+	{\renewcommand{\shortTitle}{#1}}
+	{\renewcommand{\shortTitle}{#2}}
+	\renewcommand{\rightmark}{\shortTitle}
+	\subsection*{#1}
+	\ifthenelse{\equal{#3}{false}}
+	{}
+	{
+		\ifthenelse{\equal{#3}{}}
+		{\addcontentsline{toc}{subsection}{\myNumberLine{\shortTitle}}}
+		{
+			\ifthenelse{\equal{#3}{true}}
+			{\addcontentsline{toc}{subsection}{\myNumberLine{\shortTitle}}}
+			{
+				\ifthenelse{\equal{#3}{chapter}}
+				{\addcontentsline{toc}{#3}{\myChapterNumberLine{\shortTitle}}}
+				{\addcontentsline{toc}{#3}{\myNumberLine{\shortTitle}}}
+			}
+		}
+	}
+	\stopcontents[chapters]
+}
+
+\newcommand{\mySubSubSection}[2]{
+	\ifthenelse{\equal{\minitoclevel}{subsubsection}}
+	{\resumecontents[chapters]}{}
+	\ifthenelse{\equal{#2}{}}
+	{\subsubsection{#1}}
+	{\subsubsection[#2]{#1}}
+	\stopcontents[chapters]
+}
+
+\newcommand{\mySubSubSectionStar}[3]{
+	\ifthenelse{\equal{\minitoclevel}{subsubsection}}
+	{\resumecontents[chapters]}{}
+	\ifthenelse{\equal{#2}{}}
+	{\renewcommand{\shortTitle}{#1}}
+	{\renewcommand{\shortTitle}{#2}}
+	\renewcommand{\rightmark}{\shortTitle}
+	\subsubsection*{#1}
+	\ifthenelse{\equal{#3}{false}}
+	{}
+	{
+		\ifthenelse{\equal{#3}{}}
+		{\addcontentsline{toc}{subsubsection}{\myNumberLine{\shortTitle}}}
+		{
+			\ifthenelse{\equal{#3}{true}}
+			{\addcontentsline{toc}{subsubsection}{\myNumberLine{\shortTitle}}}
+			{
+				\ifthenelse{\equal{#3}{chapter}}
+				{\addcontentsline{toc}{#3}{\myChapterNumberLine{\shortTitle}}}
+				{\addcontentsline{toc}{#3}{\myNumberLine{\shortTitle}}}
+			}
+		}
+	}
+	\stopcontents[chapters]
+}
+
+\newcommand{\myRestoreMarks}{
+	\let\leftmark=\oldleftmark
+	\let\rightmark=\oldrightmark
+}
+
+\newcommand{\myCleanStarChapterEnd}{
+	\clearpage
+	\myRestoreMarks
+}
+
+\newcommand{\currentlanguage}{english}
+
+\newcommand{\switchLanguage}[1]{
+	\renewcommand{\currentlanguage}{#1}
+	\ifthenelse{\equal{#1}{français}}
+	{
+		\usepackage[frenchb]{babel}
+		\renewcommand{\myChapterLabel}{Chapitre}
+		\renewcommand{\myAppendixLabel}{Annexe}
+		\renewcommand{\lifa}{Laboratoire d'Informatique Fondamentale et Appliquée (LIFA)}
+		\renewcommand{\myBibliographyTitle}{Bibliographie}
+		\renewcommand{\phdthesislabel}{Thèse de Doctorat en $~$ \studentspeciality $~$, Université de Dschang}
+		\renewcommand{\computerScience}{Informatique}
+		\renewcommand{\mathematics}{Mathématiques}
+		\renewcommand{\studentlab}{LIFA}
+		\renewcommand{\doctypethesis}{Thèse de Doctorat en}
+		\renewcommand{\doctypemaster}{Mémoire de Master en}
+		\renewcommand{\losname}{Liste des Symboles}
+		\renewcommand{\loaname}{Liste des Acronymes}
+	}{
+		\usepackage[english]{babel}
+		\renewcommand{\myChapterLabel}{Chapter}
+		\renewcommand{\myAppendixLabel}{Appendix}
+		\renewcommand{\lifa}{Laboratoire d'Informatique Fondamentale et Appliquée (LIFA)}
+		\renewcommand{\myBibliographyTitle}{Bibliography}
+				\renewcommand{\phdthesislabel}{PhD Thesis in $~$ \studentspeciality $~$, University of Dschang}
+		\renewcommand{\computerScience}{Computer Science}
+		\renewcommand{\mathematics}{Mathematics}
+		\renewcommand{\studentlab}{LIFA}
+		\renewcommand{\doctypethesis}{PhD Thesis in}
+		\renewcommand{\doctypemaster}{Master Report in}
+		\renewcommand{\losname}{List of Symbols}
+		\renewcommand{\loaname}{List of Acronyms}
+	}
+}

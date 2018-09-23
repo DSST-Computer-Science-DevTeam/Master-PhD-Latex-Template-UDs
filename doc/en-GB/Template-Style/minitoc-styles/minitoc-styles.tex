@@ -1,0 +1,71 @@
+
+\newcommand{\minitoclevel}{section}
+\newcommand{\minitocstyle}{titleontopright}
+
+% Insertion d'une mini table de matière
+\newcommand{\myMiniToc}[2]{
+	\ifthenelse{\equal{#1}{}}
+	{\renewcommand{\minitoclevel}{section}}
+	{\renewcommand{\minitoclevel}{#1}}
+	\startcontents[chapters]
+	\ifthenelse{\equal{\minitocstyle}{fieldset}}
+	{\myMiniTocFieldset{#2}}
+	{
+		\ifthenelse{\equal{\minitocstyle}{titleontopright}}
+		{\myMiniTocTitleOnTopRight{#2}}
+		{}
+	}
+}%
+
+% Minitoc de type titleontop
+\newcommand{\myMiniTocTitleOnTopRight}[1]{
+	\vspace{-0.7mm}
+	\vspace{20pt}
+	%\hspace{-22pt}
+	\begin{minipage}{15cm}
+	\begin{flushright}\noindent\textcolor{black}{\textbf{#1}} \vspace{5pt} \hrule height 0.08mm \end{flushright}
+	\par
+	\printcontents[chapters]{}{1}{}
+	\par
+	\begin{flushright} \vspace{0pt} \hrule height 0.08mm \vspace{30pt} \end{flushright}
+	\end{minipage}
+}
+
+% Minitoc de type fieldset
+\newcommand{\myMiniTocFieldset}[1]{
+	%\vspace{-0.7mm}
+	\vspace{5pt}
+	%\hspace{-22pt}
+	\begin{minipage}{15cm}
+		\parbox[c]{.07\textwidth}{
+			\centering
+			\textcolor{black}{\hrule height 0.4mm}
+		}
+		\parbox[c]{.2\textwidth}{
+			\centering
+			\textcolor{black}{\textsc{\textbf{#1}}}
+		}
+		\parbox[c]{.71\textwidth}{
+			\centering
+			\textcolor{black}{\hrule height 0.4mm}
+		}
+		%\vspace{-10pt} 
+		\par
+		\printcontents[chapters]{}{1}{}
+		\par
+		\begin{flushright} 
+			\vspace{0pt} 
+			\hrule height 0.4mm 
+			\vspace{30pt} 
+		\end{flushright}
+	\end{minipage}
+}
+
+\newcommand{\myMiniTocClearPage}[2]{
+	\myMiniToc{#1}{#2}
+	\clearpage
+}
+
+\newcommand{\myMiniTocStyle}[1]{
+	\renewcommand{\minitocstyle}{#1}
+}
