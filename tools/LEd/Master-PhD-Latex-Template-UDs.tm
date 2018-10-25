@@ -1,4 +1,4 @@
-//25-10-2018 11:09:09
+//25-10-2018 19:16:51
 //template generated from project Master-PhD-Latex-Template-UDs.lpr
 
 [templateID]
@@ -201,7 +201,7 @@ line:}
 line:
 line:
 
-[<projectdir>\my-thesis\build.bat]
+[<projectdir>\my-thesis\abstract\abstract.tex]
 cnfg:ActiveFilters=
 cnfg:Bookmark#0=0
 cnfg:Bookmark#1=0
@@ -218,13 +218,13 @@ cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=5
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 cnfg:
@@ -240,18 +240,18 @@ cnfg:Bookmark#6=0
 cnfg:Bookmark#7=0
 cnfg:Bookmark#8=0
 cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
+cnfg:CaretPos.X=22
+cnfg:CaretPos.Y=6
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=1
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 cnfg:
@@ -271,14 +271,14 @@ cnfg:CaretPos.X=0
 cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
-cnfg:IsMainFile=yes
-cnfg:Opened=yes
+cnfg:IsMainFile=no
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=0
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 cnfg:
@@ -299,13 +299,13 @@ cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=4
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 cnfg:
@@ -321,18 +321,18 @@ cnfg:Bookmark#6=0
 cnfg:Bookmark#7=0
 cnfg:Bookmark#8=0
 cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
+cnfg:CaretPos.X=25
+cnfg:CaretPos.Y=1
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=6
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 cnfg:
@@ -348,14 +348,14 @@ cnfg:Bookmark#6=0
 cnfg:Bookmark#7=0
 cnfg:Bookmark#8=0
 cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
+cnfg:CaretPos.X=31
+cnfg:CaretPos.Y=128
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
 cnfg:Opened=no
 cnfg:ScrollPos.X=0
-cnfg:ScrollPos.Y=0
+cnfg:ScrollPos.Y=122
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
@@ -402,8 +402,8 @@ cnfg:Bookmark#6=0
 cnfg:Bookmark#7=0
 cnfg:Bookmark#8=0
 cnfg:Bookmark#9=0
-cnfg:CaretPos.X=25
-cnfg:CaretPos.Y=1
+cnfg:CaretPos.X=0
+cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
@@ -493,30 +493,20 @@ cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
-cnfg:SpellChecking=no
+cnfg:SpellChecking=yes
 cnfg:TabOrder=-1
-cnfg:UseThesaurus=no
-cnfg:WrapLine=no
-line:@echo off
-line:%3
-line:echo RAW===================================================
-line:echo RAW=== /b/c2/cBIBTEX/b/c0/c ========================================
-line:echo RAW===================================================
-line:bibtex bibliography
-line:echo RAW===================================================
-line:echo RAW=== /b/c2/cLATEX/b/c0/c =========================================
-line:echo RAW===================================================
-line:latex --src-specials %2.tex
-line:echo RAW===================================================
-line:echo RAW=== /b/c2/cLatex => PDF/b/c0/c =========================================
-line:echo RAW===================================================
-line:pdflatex %2.tex
-line:echo RAW===================================================
-line:echo RAW=== /b/c2/cCreation du .ps/b/c0/c =========================================
-line:echo RAW===================================================
-line:pdf2ps %2.pdf %2.ps
+cnfg:UseThesaurus=yes
+cnfg:WrapLine=yes
+line:\myChapterStar{Abstract}{}{section}
+line:The work presented ...
+line:
+line:\vspace{1cm}
+line:\noindent\textbf{Keywords:} Structured documents, Worflow of cooperative edition, Merging partial replicas, Conflict, Consensus, Tree automata, Automata product, Lazy evaluation, TinyCE v2.
+line:
+line:\myCleanStarChapterEnd
+line:
 
-[<projectdir>\my-thesis\abstract\abstract.tex]
+[<projectdir>\my-thesis\Chap2\Chap2.tex]
 cnfg:ActiveFilters=
 cnfg:Bookmark#0=0
 cnfg:Bookmark#1=0
@@ -803,251 +793,6 @@ cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
-cnfg:ScrollPos.X=0
-cnfg:ScrollPos.Y=0
-cnfg:SearchListCount=0
-cnfg:ShowSyntax=yes
-cnfg:SpellChecking=yes
-cnfg:TabOrder=3
-cnfg:UseThesaurus=yes
-cnfg:WrapLine=yes
-line:\myChapterStar{Abstract}{}{section}
-line:The work presented ...
-line:
-line:\vspace{1cm}
-line:\noindent\textbf{Keywords:} Structured documents, Worflow of cooperative edition, Merging partial replicas, Conflict, Consensus, Tree automata, Automata product, Lazy evaluation, TinyCE v2.
-line:
-line:\myCleanStarChapterEnd
-line:
-
-[<projectdir>\my-thesis\Annexes\Annexe1.tex]
-cnfg:ActiveFilters=
-cnfg:Bookmark#0=0
-cnfg:Bookmark#1=0
-cnfg:Bookmark#2=0
-cnfg:Bookmark#3=0
-cnfg:Bookmark#4=0
-cnfg:Bookmark#5=0
-cnfg:Bookmark#6=0
-cnfg:Bookmark#7=0
-cnfg:Bookmark#8=0
-cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
-cnfg:CharSet=def
-cnfg:FoldedLines=
-cnfg:IsMainFile=no
-cnfg:Opened=no
-cnfg:ScrollPos.X=0
-cnfg:ScrollPos.Y=0
-cnfg:SearchListCount=0
-cnfg:ShowSyntax=yes
-cnfg:SpellChecking=yes
-cnfg:TabOrder=-1
-cnfg:UseThesaurus=yes
-cnfg:WrapLine=yes
-cnfg:
-cnfg:[Files\3]
-cnfg:ActiveFilters=
-cnfg:Bookmark#0=0
-cnfg:Bookmark#1=0
-cnfg:Bookmark#2=0
-cnfg:Bookmark#3=0
-cnfg:Bookmark#4=0
-cnfg:Bookmark#5=0
-cnfg:Bookmark#6=0
-cnfg:Bookmark#7=0
-cnfg:Bookmark#8=0
-cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
-cnfg:CharSet=def
-cnfg:FoldedLines=
-cnfg:IsMainFile=no
-cnfg:Opened=no
-cnfg:ScrollPos.X=0
-cnfg:ScrollPos.Y=24
-cnfg:SearchListCount=0
-cnfg:ShowSyntax=yes
-cnfg:SpellChecking=yes
-cnfg:TabOrder=-1
-cnfg:UseThesaurus=yes
-cnfg:WrapLine=yes
-line:\myChapter{Un autre exemple complet de fusion consensuelle}{Un autre exemple complet de fusion consensuelle}\label{annexeFusions}
-line:\mySaveMarks
-line:Dans cette annexe...
-line:
-line:\mySectionStar{Les schémas des règles de transition}{}{false}
-line:Rappelons que les schémas des transitions (complétés pour prendre en compte les documents non clos) de l'automate permettant de représenter les expansions des répliques partielles suivant la vue $\mathcal{V}_1 = \{A,B\}$ lorsqu'on associe les symboles de Dyck '(' et ')' (resp. '[' et ']') au symbole visible $A$ (resp. $B$) et qu'on associe les symboles '($_{\omega}$' et ')$_{\omega}$' (resp. '[$_{\omega}$' et ']$_{\omega}$') au bourgeon $A_{\omega}$ (resp. $B_{\omega}$) de type $A$ (resp. $B$), sont les suivants:
-line:
-line:\begin{table}
-line:	\caption{Les schémas des règles de transition pour notre exemple}
-line:	\begin{flushleft}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	$\langle A,w_{1} \rangle$ & $\longrightarrow$ & $(P_{1}, [\langle C,u \rangle, \langle B,v \rangle])$ & si $w_{1}=u[v]$ \\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle A,w_{2} \rangle$ & $\longrightarrow$ & $(P_{1}, [\langle C,u \rangle, \langle B,w_{11} \rangle])$ & si $w_{2}=uw_{11}$ avec $w_{11}=[_{\omega}\, ]_{\omega}$ \\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle A,w_{3} \rangle$ & $\longrightarrow$ & $(P_{2}, [\,])$ & si $w_{3}=\epsilon$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle A,w_{4} \rangle$ & $\longrightarrow$ & $(A_{\omega}, [\,])$ & si $w_{4}=(_{\omega}\, )_{\omega}$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle B,w_{5} \rangle$ & $\longrightarrow$ & $(P_{3}, [\langle C,u \rangle, \langle A,v \rangle])$ & si $w_{5}=u(v)$ \\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle B,w_{6} \rangle$ & $\longrightarrow$ & $(P_{3}, [\langle C,u \rangle, \langle A,w_{4} \rangle])$ & si $w_{6}=uw_{4}$ \\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle B,w_{7} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,u \rangle, \langle B,v \rangle])$ & si $w_{7}=[u][v]$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle B,w_{8} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,w_{11} \rangle, \langle B,v \rangle])$ & si $w_{8}=w_{11}[v]$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle B,w_{9} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,u \rangle, \langle B,w_{11} \rangle])$ & si $w_{9}=[u]w_{11}$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle B,w_{10} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,w_{11} \rangle, \langle B,w_{11} \rangle])$ & si $w_{10}=w_{11}w_{11}$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle B,w_{11} \rangle$ & $\longrightarrow$ & $(B_{\omega}, [\,])$ & si $w_{11}=[_{\omega}\, ]_{\omega}$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle C,w_{12} \rangle$ & $\longrightarrow$ & $(P_{5}, [\langle A,u \rangle, \langle C,v \rangle])$ & si $w_{12}=(u)v$ \\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle C,w_{13} \rangle$ & $\longrightarrow$ & $(P_{5}, [\langle A,w_{4} \rangle, \langle C,v \rangle])$ & si $w_{13}=w_{4}v$ \\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle C,w_{14} \rangle$ & $\longrightarrow$ & $(P_{6}, [\langle C,u \rangle, \langle C,v \rangle])$ & si $w_{14}=uv\neq\epsilon$\\
-line:	
-line:	\end{tabular}
-line:	\begin{tabular}[t]{lcp{5.3cm}l}
-line:	
-line:	$\langle C,w_{15} \rangle$ & $\longrightarrow$ & $(C_\omega,[\,])$ & si $w_{15}=\epsilon$\\
-line:	
-line:	\end{tabular}
-line:	\end{flushleft}
-line:\end{table}
-line:
-line:De même...
-line:
-line:
-line:
-line:\myCleanStarChapterEnd
-line:
-
-[<projectdir>\my-thesis\Annexes\Annexe2.tex]
-cnfg:ActiveFilters=
-cnfg:Bookmark#0=0
-cnfg:Bookmark#1=0
-cnfg:Bookmark#2=0
-cnfg:Bookmark#3=0
-cnfg:Bookmark#4=0
-cnfg:Bookmark#5=0
-cnfg:Bookmark#6=0
-cnfg:Bookmark#7=0
-cnfg:Bookmark#8=0
-cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
-cnfg:CharSet=def
-cnfg:FoldedLines=
-cnfg:IsMainFile=no
-cnfg:Opened=no
-cnfg:ScrollPos.X=0
-cnfg:ScrollPos.Y=0
-cnfg:SearchListCount=0
-cnfg:ShowSyntax=yes
-cnfg:SpellChecking=yes
-cnfg:TabOrder=-1
-cnfg:UseThesaurus=yes
-cnfg:WrapLine=yes
-line:\myChapter{Quelques fonctions Haskell pour le calcul des consensus}{}\label{annexeFonctionsHask}
-line:\mySaveMarks
-line:Dans cette annexe...
-line:
-line:\mySectionStar{Représentation des grammaires et des vues}{}{false}
-line:Une grammaire est constituée d'un ensemble de symboles et d'un ensemble de productions. Nous représentons une grammaire par le type \Verb|Gram| suivant:
-line:\begin{Verbatim}[fontsize=\small, numbers=left, numbersep=8pt]
-line:data Gram prod symb = Gram {prods::[prod], 
-line:                            symbols::[symb], 
-line:                            lhs::prod -> symb, 
-line:                            rhs::prod -> [symb]}
-line:\end{Verbatim}
-line:
-line:La fonction \Verb|lhs| (resp. \Verb|rhs|) prend en argument une grammaire \Verb|G| et une production \Verb|p| de \Verb|G| puis retourne le symbole en partie gauche (resp. la liste des symboles en partie droite) de \Verb|p|. \`{A} partir de ce type, on peut construire la grammaire $\mathbb{G}_{expl}$ (chap \ref{chapEditionStructure} exemple \ref{exempleGrammaire}) grâce au code Haskell suivant:
-line:\begin{Verbatim}[fontsize=\small, numbers=left, numbersep=8pt]
-line:data Prod = P1 | P2 | P3 | P4 | P5 | P6 | P7 | Aomega | Bomega | Comega
-line:            deriving (Eq, Show)
-line:data Symb = A | B | C  deriving (Eq, Show)
-line:
-line:gram :: Gram Prod Symb
-line:gram = Gram lprod lsymb lhs_ rhs_
-line:   where
-line:      lprod = [P1, P2, P3, P4, P5, P6, P7]
-line:      lsymb = [A, B, C]
-line:      lhs_ p = case p of
-line:            P1 -> A; P2 -> A; P3 -> B; P4 -> B; P5 -> C; P6 -> C; P7 -> C
-line:      rhs_ p = case p of
-line:            P1 -> [C, B]; P2 -> []; P3 -> [C, A]; P4 -> [B, B]; 
-line:            P5 -> [A, C]; P6 -> [C, C]; P7 -> []
-line:\end{Verbatim}
-line:
-line:Les productions \Verb|Aomega, Bomega| et \Verb|Comega| ont été introduites pour pouvoir désigner les bourgeons de types respectifs \Verb|A|, \Verb|B| et \Verb|C|.
-line:
-line:
-line:\myCleanStarChapterEnd
-line:
-
-[<projectdir>\my-thesis\Chap2\Chap2.tex]
-cnfg:ActiveFilters=
-cnfg:Bookmark#0=0
-cnfg:Bookmark#1=0
-cnfg:Bookmark#2=0
-cnfg:Bookmark#3=0
-cnfg:Bookmark#4=0
-cnfg:Bookmark#5=0
-cnfg:Bookmark#6=0
-cnfg:Bookmark#7=0
-cnfg:Bookmark#8=0
-cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
-cnfg:CharSet=def
-cnfg:FoldedLines=
-cnfg:IsMainFile=no
 cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=18
@@ -1141,6 +886,33 @@ line:\end{table}
 line:
 
 [<projectdir>\my-thesis\Chap3\Chap3.tex]
+cnfg:ActiveFilters=
+cnfg:Bookmark#0=0
+cnfg:Bookmark#1=0
+cnfg:Bookmark#2=0
+cnfg:Bookmark#3=0
+cnfg:Bookmark#4=0
+cnfg:Bookmark#5=0
+cnfg:Bookmark#6=0
+cnfg:Bookmark#7=0
+cnfg:Bookmark#8=0
+cnfg:Bookmark#9=0
+cnfg:CaretPos.X=0
+cnfg:CaretPos.Y=0
+cnfg:CharSet=def
+cnfg:FoldedLines=
+cnfg:IsMainFile=no
+cnfg:Opened=no
+cnfg:ScrollPos.X=0
+cnfg:ScrollPos.Y=0
+cnfg:SearchListCount=0
+cnfg:ShowSyntax=yes
+cnfg:SpellChecking=no
+cnfg:TabOrder=-1
+cnfg:UseThesaurus=no
+cnfg:WrapLine=no
+cnfg:
+cnfg:[Files\3]
 cnfg:ActiveFilters=
 cnfg:Bookmark#0=0
 cnfg:Bookmark#1=0
@@ -1262,13 +1034,13 @@ cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=1
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=2
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 line:%\myChapterStar{Titre}{Titre court}{Ajouter à la table des matières? (false|true|chapter|section|subsection|subsubsection -chapter par défaut-)}
@@ -1311,13 +1083,13 @@ cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=5
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 line:%\myChapterStar{Titre}{Titre court}{Ajouter à la table des matières? (false|true|chapter|section|subsection|subsubsection -chapter par défaut-)}
@@ -1348,13 +1120,13 @@ cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=1
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 line:%\myChapter{Titre}{Titre court}
@@ -1423,18 +1195,18 @@ cnfg:Bookmark#6=0
 cnfg:Bookmark#7=0
 cnfg:Bookmark#8=0
 cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
+cnfg:CaretPos.X=28
+cnfg:CaretPos.Y=81
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=yes
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
-cnfg:ScrollPos.Y=0
+cnfg:ScrollPos.Y=77
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=0
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 line:% Import du style (obligatoire)
@@ -1517,8 +1289,8 @@ line:
 line:	% *********** Annexes *********************
 line:	\appendix
 line:	
-line:	\input{Annexes/Annexe1}
-line:	\input{Annexes/Annexe2}
+line:	\input{Appendices/Appendix1}
+line:	\input{Appendices/Appendix2}
 line:	%Ainsi de suite
 line:}
 line:\end{document}
@@ -1541,13 +1313,13 @@ cnfg:CaretPos.Y=0
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=4
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 line:%\myChapterStar{Titre}{Titre court}{Ajouter à la table des matières? (false|true|chapter|section|subsection|subsubsection -chapter par défaut-)}
@@ -1572,18 +1344,18 @@ cnfg:Bookmark#6=0
 cnfg:Bookmark#7=0
 cnfg:Bookmark#8=0
 cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
+cnfg:CaretPos.X=22
+cnfg:CaretPos.Y=6
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
-cnfg:Opened=yes
+cnfg:Opened=no
 cnfg:ScrollPos.X=0
 cnfg:ScrollPos.Y=0
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
-cnfg:TabOrder=6
+cnfg:TabOrder=-1
 cnfg:UseThesaurus=yes
 cnfg:WrapLine=yes
 line:\myChapterStar{Résumé}{}{section}
@@ -1754,14 +1526,14 @@ cnfg:Bookmark#6=0
 cnfg:Bookmark#7=0
 cnfg:Bookmark#8=0
 cnfg:Bookmark#9=0
-cnfg:CaretPos.X=0
-cnfg:CaretPos.Y=0
+cnfg:CaretPos.X=31
+cnfg:CaretPos.Y=128
 cnfg:CharSet=def
 cnfg:FoldedLines=
 cnfg:IsMainFile=no
 cnfg:Opened=no
 cnfg:ScrollPos.X=0
-cnfg:ScrollPos.Y=0
+cnfg:ScrollPos.Y=122
 cnfg:SearchListCount=0
 cnfg:ShowSyntax=yes
 cnfg:SpellChecking=yes
@@ -1897,7 +1669,6 @@ line:        colorlinks=true,%
 line:        linkcolor=blue,%
 line:        citecolor=blue,%
 line:        filecolor=forestgreen,%
-line:        pagecolor=red,%
 line:        urlcolor=midnightblue,%
 line:        pdftex,%
 line:        unicode]{hyperref}
@@ -3011,3 +2782,231 @@ line:		\renewcommand{\loaname}{List of Acronyms}
 line:	}
 line:}
 line:
+
+[<projectdir>\My-Thesis\Appendices\Appendix1.tex]
+cnfg:ActiveFilters=
+cnfg:Bookmark#0=0
+cnfg:Bookmark#1=0
+cnfg:Bookmark#2=0
+cnfg:Bookmark#3=0
+cnfg:Bookmark#4=0
+cnfg:Bookmark#5=0
+cnfg:Bookmark#6=0
+cnfg:Bookmark#7=0
+cnfg:Bookmark#8=0
+cnfg:Bookmark#9=0
+cnfg:CaretPos.X=0
+cnfg:CaretPos.Y=0
+cnfg:CharSet=def
+cnfg:FoldedLines=
+cnfg:IsMainFile=no
+cnfg:Opened=no
+cnfg:ScrollPos.X=0
+cnfg:ScrollPos.Y=0
+cnfg:SearchListCount=0
+cnfg:ShowSyntax=yes
+cnfg:SpellChecking=yes
+cnfg:TabOrder=-1
+cnfg:UseThesaurus=yes
+cnfg:WrapLine=yes
+line:\myChapter{Un autre exemple complet de fusion consensuelle}{Un autre exemple complet de fusion consensuelle}\label{annexeFusions}
+line:\mySaveMarks
+line:Dans cette annexe...
+line:
+line:\mySectionStar{Les schémas des règles de transition}{}{false}
+line:Rappelons que les schémas des transitions (complétés pour prendre en compte les documents non clos) de l'automate permettant de représenter les expansions des répliques partielles suivant la vue $\mathcal{V}_1 = \{A,B\}$ lorsqu'on associe les symboles de Dyck '(' et ')' (resp. '[' et ']') au symbole visible $A$ (resp. $B$) et qu'on associe les symboles '($_{\omega}$' et ')$_{\omega}$' (resp. '[$_{\omega}$' et ']$_{\omega}$') au bourgeon $A_{\omega}$ (resp. $B_{\omega}$) de type $A$ (resp. $B$), sont les suivants:
+line:
+line:\begin{table}
+line:	\caption{Les schémas des règles de transition pour notre exemple}
+line:	\begin{flushleft}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	$\langle A,w_{1} \rangle$ & $\longrightarrow$ & $(P_{1}, [\langle C,u \rangle, \langle B,v \rangle])$ & si $w_{1}=u[v]$ \\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle A,w_{2} \rangle$ & $\longrightarrow$ & $(P_{1}, [\langle C,u \rangle, \langle B,w_{11} \rangle])$ & si $w_{2}=uw_{11}$ avec $w_{11}=[_{\omega}\, ]_{\omega}$ \\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle A,w_{3} \rangle$ & $\longrightarrow$ & $(P_{2}, [\,])$ & si $w_{3}=\epsilon$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle A,w_{4} \rangle$ & $\longrightarrow$ & $(A_{\omega}, [\,])$ & si $w_{4}=(_{\omega}\, )_{\omega}$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle B,w_{5} \rangle$ & $\longrightarrow$ & $(P_{3}, [\langle C,u \rangle, \langle A,v \rangle])$ & si $w_{5}=u(v)$ \\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle B,w_{6} \rangle$ & $\longrightarrow$ & $(P_{3}, [\langle C,u \rangle, \langle A,w_{4} \rangle])$ & si $w_{6}=uw_{4}$ \\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle B,w_{7} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,u \rangle, \langle B,v \rangle])$ & si $w_{7}=[u][v]$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle B,w_{8} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,w_{11} \rangle, \langle B,v \rangle])$ & si $w_{8}=w_{11}[v]$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle B,w_{9} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,u \rangle, \langle B,w_{11} \rangle])$ & si $w_{9}=[u]w_{11}$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle B,w_{10} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,w_{11} \rangle, \langle B,w_{11} \rangle])$ & si $w_{10}=w_{11}w_{11}$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle B,w_{11} \rangle$ & $\longrightarrow$ & $(B_{\omega}, [\,])$ & si $w_{11}=[_{\omega}\, ]_{\omega}$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle C,w_{12} \rangle$ & $\longrightarrow$ & $(P_{5}, [\langle A,u \rangle, \langle C,v \rangle])$ & si $w_{12}=(u)v$ \\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle C,w_{13} \rangle$ & $\longrightarrow$ & $(P_{5}, [\langle A,w_{4} \rangle, \langle C,v \rangle])$ & si $w_{13}=w_{4}v$ \\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle C,w_{14} \rangle$ & $\longrightarrow$ & $(P_{6}, [\langle C,u \rangle, \langle C,v \rangle])$ & si $w_{14}=uv\neq\epsilon$\\
+line:	
+line:	\end{tabular}
+line:	\begin{tabular}[t]{lcp{5.3cm}l}
+line:	
+line:	$\langle C,w_{15} \rangle$ & $\longrightarrow$ & $(C_\omega,[\,])$ & si $w_{15}=\epsilon$\\
+line:	
+line:	\end{tabular}
+line:	\end{flushleft}
+line:\end{table}
+line:
+line:De même...
+line:
+line:
+line:
+line:\myRestoreMarks
+line:
+
+[<projectdir>\My-Thesis\Appendices\Appendix2.tex]
+cnfg:ActiveFilters=
+cnfg:Bookmark#0=0
+cnfg:Bookmark#1=0
+cnfg:Bookmark#2=0
+cnfg:Bookmark#3=0
+cnfg:Bookmark#4=0
+cnfg:Bookmark#5=0
+cnfg:Bookmark#6=0
+cnfg:Bookmark#7=0
+cnfg:Bookmark#8=0
+cnfg:Bookmark#9=0
+cnfg:CaretPos.X=0
+cnfg:CaretPos.Y=0
+cnfg:CharSet=def
+cnfg:FoldedLines=
+cnfg:IsMainFile=no
+cnfg:Opened=no
+cnfg:ScrollPos.X=0
+cnfg:ScrollPos.Y=0
+cnfg:SearchListCount=0
+cnfg:ShowSyntax=yes
+cnfg:SpellChecking=yes
+cnfg:TabOrder=-1
+cnfg:UseThesaurus=yes
+cnfg:WrapLine=yes
+line:\myChapter{Quelques fonctions Haskell pour le calcul des consensus}{}\label{annexeFonctionsHask}
+line:\mySaveMarks
+line:Dans cette annexe...
+line:
+line:\mySectionStar{Représentation des grammaires et des vues}{}{false}
+line:Une grammaire est constituée d'un ensemble de symboles et d'un ensemble de productions. Nous représentons une grammaire par le type \Verb|Gram| suivant:
+line:\begin{Verbatim}[fontsize=\small, numbers=left, numbersep=8pt]
+line:data Gram prod symb = Gram {prods::[prod], 
+line:                            symbols::[symb], 
+line:                            lhs::prod -> symb, 
+line:                            rhs::prod -> [symb]}
+line:\end{Verbatim}
+line:
+line:La fonction \Verb|lhs| (resp. \Verb|rhs|) prend en argument une grammaire \Verb|G| et une production \Verb|p| de \Verb|G| puis retourne le symbole en partie gauche (resp. la liste des symboles en partie droite) de \Verb|p|. \`{A} partir de ce type, on peut construire la grammaire $\mathbb{G}_{expl}$ (chap \ref{chapEditionStructure} exemple \ref{exempleGrammaire}) grâce au code Haskell suivant:
+line:\begin{Verbatim}[fontsize=\small, numbers=left, numbersep=8pt]
+line:data Prod = P1 | P2 | P3 | P4 | P5 | P6 | P7 | Aomega | Bomega | Comega
+line:            deriving (Eq, Show)
+line:data Symb = A | B | C  deriving (Eq, Show)
+line:
+line:gram :: Gram Prod Symb
+line:gram = Gram lprod lsymb lhs_ rhs_
+line:   where
+line:      lprod = [P1, P2, P3, P4, P5, P6, P7]
+line:      lsymb = [A, B, C]
+line:      lhs_ p = case p of
+line:            P1 -> A; P2 -> A; P3 -> B; P4 -> B; P5 -> C; P6 -> C; P7 -> C
+line:      rhs_ p = case p of
+line:            P1 -> [C, B]; P2 -> []; P3 -> [C, A]; P4 -> [B, B]; 
+line:            P5 -> [A, C]; P6 -> [C, C]; P7 -> []
+line:\end{Verbatim}
+line:
+line:Les productions \Verb|Aomega, Bomega| et \Verb|Comega| ont été introduites pour pouvoir désigner les bourgeons de types respectifs \Verb|A|, \Verb|B| et \Verb|C|.
+line:
+line:
+line:\myRestoreMarks
+line:
+
+[<projectdir>\My-Thesis\build.bat]
+cnfg:ActiveFilters=
+cnfg:Bookmark#0=0
+cnfg:Bookmark#1=0
+cnfg:Bookmark#2=0
+cnfg:Bookmark#3=0
+cnfg:Bookmark#4=0
+cnfg:Bookmark#5=0
+cnfg:Bookmark#6=0
+cnfg:Bookmark#7=0
+cnfg:Bookmark#8=0
+cnfg:Bookmark#9=0
+cnfg:CaretPos.X=0
+cnfg:CaretPos.Y=0
+cnfg:CharSet=def
+cnfg:FoldedLines=
+cnfg:IsMainFile=no
+cnfg:Opened=no
+cnfg:ScrollPos.X=0
+cnfg:ScrollPos.Y=0
+cnfg:SearchListCount=0
+cnfg:ShowSyntax=yes
+cnfg:SpellChecking=no
+cnfg:TabOrder=-1
+cnfg:UseThesaurus=no
+cnfg:WrapLine=no
+line:@echo off
+line:%3
+line:echo RAW===================================================
+line:echo RAW=== /b/c2/cBIBTEX/b/c0/c ========================================
+line:echo RAW===================================================
+line:bibtex bibliography
+line:echo RAW===================================================
+line:echo RAW=== /b/c2/cLATEX/b/c0/c =========================================
+line:echo RAW===================================================
+line:latex --src-specials %2.tex
+line:echo RAW===================================================
+line:echo RAW=== /b/c2/cLatex => PDF/b/c0/c =========================================
+line:echo RAW===================================================
+line:pdflatex %2.tex
+line:echo RAW===================================================
+line:echo RAW=== /b/c2/cCreation du .ps/b/c0/c =========================================
+line:echo RAW===================================================
+line:pdf2ps %2.pdf %2.ps
