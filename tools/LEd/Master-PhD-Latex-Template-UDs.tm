@@ -2757,7 +2757,7 @@ line:		\renewcommand{\myChapterLabel}{Chapitre}
 line:		\renewcommand{\myAppendixLabel}{Annexe}
 line:		\renewcommand{\lifa}{Laboratoire d'Informatique Fondamentale et Appliquée (LIFA)}
 line:		\renewcommand{\myBibliographyTitle}{Bibliographie}
-line:		\renewcommand{\phdthesislabel}{Thèse de Doctorat en $~$ \studentspeciality $~$, Université de Dschang}
+line:		\renewcommand{\phdthesislabel}{\doctype $~$ \studentspeciality $~$, Université de Dschang}
 line:		\renewcommand{\computerScience}{Informatique}
 line:		\renewcommand{\mathematics}{Mathématiques}
 line:		\renewcommand{\studentlab}{LIFA}
@@ -2771,7 +2771,7 @@ line:		\renewcommand{\myChapterLabel}{Chapter}
 line:		\renewcommand{\myAppendixLabel}{Appendix}
 line:		\renewcommand{\lifa}{Laboratoire d'Informatique Fondamentale et Appliquée (LIFA)}
 line:		\renewcommand{\myBibliographyTitle}{Bibliography}
-line:				\renewcommand{\phdthesislabel}{PhD Thesis in $~$ \studentspeciality $~$, University of Dschang}
+line:				\renewcommand{\phdthesislabel}{\doctype $~$ \studentspeciality $~$, University of Dschang}
 line:		\renewcommand{\computerScience}{Computer Science}
 line:		\renewcommand{\mathematics}{Mathematics}
 line:		\renewcommand{\studentlab}{LIFA}
