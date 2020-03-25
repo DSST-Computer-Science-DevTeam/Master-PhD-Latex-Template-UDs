@@ -1,0 +1,26 @@
+\newlength{\headindent}
+\newlength{\rightblock}
+\makechapterstyle{southall}{%
+\setlength{\headindent}{36pt}
+\setlength{\rightblock}{\textwidth}
+\addtolength{\rightblock}{-\headindent}
+\setlength{\beforechapskip}{2\baselineskip}
+\setlength{\afterchapskip}{5\baselineskip}
+\setlength{\midchapskip}{0pt}
+\renewcommand{\chaptitlefont}{\huge\rmfamily\raggedright}
+\renewcommand{\chapnumfont}{\chaptitlefont}
+\renewcommand{\printchaptername}{}
+\renewcommand{\chapternamenum}{}
+\renewcommand{\afterchapternum}{}
+\renewcommand{\printchapternum}{%
+\begin{minipage}[t][\baselineskip][b]{\headindent}
+{\vspace{0pt}\chapnumfont%%%\figureversion{lining}
+\thechapter}
+\end{minipage}}
+\renewcommand{\printchaptertitle}[1]{%
+\hfill\begin{minipage}[t]{\rightblock}
+{\vspace{0pt}\chaptitlefont ##1\par}\end{minipage}}
+\renewcommand{\afterchaptertitle}{%
+\par\vspace{\baselineskip}%
+\hrulefill \par\nobreak\noindent \vskip\afterchapskip}
+}

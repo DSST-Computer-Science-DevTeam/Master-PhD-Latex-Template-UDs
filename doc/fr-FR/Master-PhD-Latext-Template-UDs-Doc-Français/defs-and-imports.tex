@@ -1,0 +1,51 @@
+% Un template bilingue pour la production des mémoires et thèses dans le département de Mathématiques-Informatique.
+% Ce template est conforme aux recommandations de l'école doctorale
+%
+% Ce fichier est conçu pour accueillir vos imports (\usepackage) et vos propres définitions d'environnements latex et/ou de style
+% Consulter le fichier style.tex pour savoir ce qui a déja été importé
+%
+% @author Zekeng Ndadji Milliam Maxime
+
+\usepackage[english]{algorithm2e} %Pour écrire des algorithmes
+%\SetKwIF{Si}{SinonSi}{Sinon}{si}{alors}{sinon si}{sinon}{finsi} %pour franciser le If
+%\SetKw{Debut}{Fin}
+\SetKwFor{For}{for}{do}{endfor}
+%\SetKwFor{PourTout}{pourTout}{faire}{finPour}%pour franciser le pour (on a remplacer ''pour'' par ''pourTout'' 
+%\SetKwForAll{PourTout}{pourTout}{faire}{finPour}
+\SetKwRepeat{Repeat}{repeat}{until}
+%\SetKwRepeat{Repeter}{repeter}{jusqu'à}%pour franciser le ''repeter''
+%\restylealgo{boxed}\linesnumbered %pour encader les algorithmes et numéroter ses lignes
+%\SetKwFor{Tantque}{tantque}{faire}{fintq}%pour franciser le tant que
+
+
+%Définition de nouveaux environnements de type théorème
+\newtheorem{theorem}{Théorème}
+\newtheorem{definition}[theorem]{Définition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{example}[theorem]{Exemple}
+\newtheorem{remark}[theorem]{Remarque}
+\newtheorem{corollary}[theorem]{Corollaire}
+\newtheorem{problem}[theorem]{Problème}
+
+%Environnements de preuve
+\newenvironment{proof}[1][{\textbf{Proof}}]{
+	\par
+	\normalfont
+	\topsep6\p@\@plus6\p@ \trivlist
+	\item[\hskip\labelsep\itshape
+	#1\@addpunct{.}]\ignorespaces
+}{%
+	\qed\endtrivlist
+}
+\newenvironment{preuve}[1][{\textbf{Preuve}}]{
+	\par
+	\normalfont
+	\topsep6\p@\@plus6\p@ \trivlist
+	\item[\hskip\labelsep\itshape
+	#1\@addpunct{.}]\ignorespaces
+}{%
+	\qed\endtrivlist
+}
+
+

@@ -1,0 +1,92 @@
+\myChapter{Un autre exemple complet de fusion consensuelle}{Un autre exemple complet de fusion consensuelle}\label{annexeFusions}
+\mySaveMarks
+Dans cette annexe...
+
+\mySectionStar{Les schémas des règles de transition}{}{false}
+Rappelons que les schémas des transitions (complétés pour prendre en compte les documents non clos) de l'automate permettant de représenter les expansions des répliques partielles suivant la vue $\mathcal{V}_1 = \{A,B\}$ lorsqu'on associe les symboles de Dyck '(' et ')' (resp. '[' et ']') au symbole visible $A$ (resp. $B$) et qu'on associe les symboles '($_{\omega}$' et ')$_{\omega}$' (resp. '[$_{\omega}$' et ']$_{\omega}$') au bourgeon $A_{\omega}$ (resp. $B_{\omega}$) de type $A$ (resp. $B$), sont les suivants:
+
+\begin{table}
+	\caption{Les schémas des règles de transition pour notre exemple}
+	\begin{flushleft}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	$\langle A,w_{1} \rangle$ & $\longrightarrow$ & $(P_{1}, [\langle C,u \rangle, \langle B,v \rangle])$ & si $w_{1}=u[v]$ \\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle A,w_{2} \rangle$ & $\longrightarrow$ & $(P_{1}, [\langle C,u \rangle, \langle B,w_{11} \rangle])$ & si $w_{2}=uw_{11}$ avec $w_{11}=[_{\omega}\, ]_{\omega}$ \\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle A,w_{3} \rangle$ & $\longrightarrow$ & $(P_{2}, [\,])$ & si $w_{3}=\epsilon$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle A,w_{4} \rangle$ & $\longrightarrow$ & $(A_{\omega}, [\,])$ & si $w_{4}=(_{\omega}\, )_{\omega}$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle B,w_{5} \rangle$ & $\longrightarrow$ & $(P_{3}, [\langle C,u \rangle, \langle A,v \rangle])$ & si $w_{5}=u(v)$ \\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle B,w_{6} \rangle$ & $\longrightarrow$ & $(P_{3}, [\langle C,u \rangle, \langle A,w_{4} \rangle])$ & si $w_{6}=uw_{4}$ \\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle B,w_{7} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,u \rangle, \langle B,v \rangle])$ & si $w_{7}=[u][v]$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle B,w_{8} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,w_{11} \rangle, \langle B,v \rangle])$ & si $w_{8}=w_{11}[v]$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle B,w_{9} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,u \rangle, \langle B,w_{11} \rangle])$ & si $w_{9}=[u]w_{11}$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle B,w_{10} \rangle$ & $\longrightarrow$ & $(P_{4}, [\langle B,w_{11} \rangle, \langle B,w_{11} \rangle])$ & si $w_{10}=w_{11}w_{11}$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle B,w_{11} \rangle$ & $\longrightarrow$ & $(B_{\omega}, [\,])$ & si $w_{11}=[_{\omega}\, ]_{\omega}$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle C,w_{12} \rangle$ & $\longrightarrow$ & $(P_{5}, [\langle A,u \rangle, \langle C,v \rangle])$ & si $w_{12}=(u)v$ \\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle C,w_{13} \rangle$ & $\longrightarrow$ & $(P_{5}, [\langle A,w_{4} \rangle, \langle C,v \rangle])$ & si $w_{13}=w_{4}v$ \\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle C,w_{14} \rangle$ & $\longrightarrow$ & $(P_{6}, [\langle C,u \rangle, \langle C,v \rangle])$ & si $w_{14}=uv\neq\epsilon$\\
+	
+	\end{tabular}
+	\begin{tabular}[t]{lcp{5.3cm}l}
+	
+	$\langle C,w_{15} \rangle$ & $\longrightarrow$ & $(C_\omega,[\,])$ & si $w_{15}=\epsilon$\\
+	
+	\end{tabular}
+	\end{flushleft}
+\end{table}
+
+De même...
+
+
+
+\myRestoreMarks

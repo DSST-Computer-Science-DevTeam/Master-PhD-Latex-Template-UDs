@@ -1,0 +1,35 @@
+\myChapter{Quelques fonctions Haskell pour le calcul des consensus}{}\label{annexeFonctionsHask}
+\mySaveMarks
+Dans cette annexe...
+
+\mySectionStar{Représentation des grammaires et des vues}{}{false}
+Une grammaire est constituée d'un ensemble de symboles et d'un ensemble de productions. Nous représentons une grammaire par le type \Verb|Gram| suivant:
+\begin{Verbatim}[fontsize=\small, numbers=left, numbersep=8pt]
+data Gram prod symb = Gram {prods::[prod], 
+                            symbols::[symb], 
+                            lhs::prod -> symb, 
+                            rhs::prod -> [symb]}
+\end{Verbatim}
+
+La fonction \Verb|lhs| (resp. \Verb|rhs|) prend en argument une grammaire \Verb|G| et une production \Verb|p| de \Verb|G| puis retourne le symbole en partie gauche (resp. la liste des symboles en partie droite) de \Verb|p|. \`{A} partir de ce type, on peut construire la grammaire $\mathbb{G}_{expl}$ (chap \ref{chapEditionStructure} exemple \ref{exempleGrammaire}) grâce au code Haskell suivant:
+\begin{Verbatim}[fontsize=\small, numbers=left, numbersep=8pt]
+data Prod = P1 | P2 | P3 | P4 | P5 | P6 | P7 | Aomega | Bomega | Comega
+            deriving (Eq, Show)
+data Symb = A | B | C  deriving (Eq, Show)
+
+gram :: Gram Prod Symb
+gram = Gram lprod lsymb lhs_ rhs_
+   where
+      lprod = [P1, P2, P3, P4, P5, P6, P7]
+      lsymb = [A, B, C]
+      lhs_ p = case p of
+            P1 -> A; P2 -> A; P3 -> B; P4 -> B; P5 -> C; P6 -> C; P7 -> C
+      rhs_ p = case p of
+            P1 -> [C, B]; P2 -> []; P3 -> [C, A]; P4 -> [B, B]; 
+            P5 -> [A, C]; P6 -> [C, C]; P7 -> []
+\end{Verbatim}
+
+Les productions \Verb|Aomega, Bomega| et \Verb|Comega| ont été introduites pour pouvoir désigner les bourgeons de types respectifs \Verb|A|, \Verb|B| et \Verb|C|.
+
+
+\myRestoreMarks

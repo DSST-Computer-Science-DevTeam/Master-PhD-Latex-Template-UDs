@@ -162,6 +162,37 @@
 	\renewcommand{\tocsetted}{true}
 }
 
+\newcommand{\myListOfAlgorithms}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\listalgorithmname}{#1}}
+	\addcontentsline{toc}{section}{\myNumberLine{\listalgorithmname}}
+	\renewcommand{\leftmark}{\listalgorithmname}
+	\renewcommand{\rightmark}{\listalgorithmname}
+	%\renewcommand{\lof}{true}
+	\listofalgorithms
+	%\renewcommand{\lof}{false}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
+\newcommand{\myListOfAlgorithmsStar}[1]{
+	\ifthenelse{\equal{\tocsetted}{false}}
+	{\clearpage}{}
+	\mySaveMarks
+	\ifthenelse{\equal{#1}{}}{}
+	{\renewcommand{\listalgorithmname}{#1}}
+	\renewcommand{\leftmark}{\listalgorithmname}
+	\renewcommand{\rightmark}{\listalgorithmname}
+	\renewcommand{\lof}{true}
+	\listofalgorithms
+	\renewcommand{\lof}{false}
+	\myCleanStarChapterEnd
+	\renewcommand{\tocsetted}{true}
+}
+
 \newcommand{\myChapter}[2]{
 	\chapter[#2]{#1}
 }
@@ -209,8 +240,14 @@
 \newcommand{\mySection}[2]{
 	\resumecontents[chapters]
 	\ifthenelse{\equal{#2}{}}
-	{\section{#1}}
-	{\section[#2]{#1}}
+	{
+		\renewcommand{\shortTitle}{#1}
+		\section{#1}
+	}
+	{
+		\renewcommand{\shortTitle}{#2}
+		\section[#2]{#1}
+	}
 	\hrule height 0.5mm
 	\vspace{5mm}
 	\stopcontents[chapters]
@@ -247,8 +284,14 @@
 	\ifthenelse{\equal{\minitoclevel}{section}}{}
 	{\resumecontents[chapters]}
 	\ifthenelse{\equal{#2}{}}
-	{\subsection{#1}}
-	{\subsection[#2]{#1}}
+	{
+		%\renewcommand{\shortTitle}{#1}
+		\subsection{#1}
+	}
+	{
+		%\renewcommand{\shortTitle}{#2}
+		\subsection[#2]{#1}
+	}
 	\stopcontents[chapters]
 }
 
@@ -282,8 +325,14 @@
 	\ifthenelse{\equal{\minitoclevel}{subsubsection}}
 	{\resumecontents[chapters]}{}
 	\ifthenelse{\equal{#2}{}}
-	{\subsubsection{#1}}
-	{\subsubsection[#2]{#1}}
+	{
+		\renewcommand{\shortTitle}{#1}
+		\subsubsection{#1}
+	}
+	{
+		\renewcommand{\shortTitle}{#2}
+		\subsubsection[#2]{#1}
+	}
 	\stopcontents[chapters]
 }
 
@@ -334,10 +383,10 @@
 		\renewcommand{\myAppendixLabel}{Annexe}
 		\renewcommand{\lifa}{Laboratoire d'Informatique Fondamentale et Appliquée (LIFA)}
 		\renewcommand{\myBibliographyTitle}{Bibliographie}
-		\renewcommand{\phdthesislabel}{\doctype $~$ \studentspeciality $~$, Université de Dschang}
+		\renewcommand{\phdthesislabel}{Thèse de Doctorat en $~$ \studentspeciality $~$, Université de Dschang}
 		\renewcommand{\computerScience}{Informatique}
 		\renewcommand{\mathematics}{Mathématiques}
-		\renewcommand{\studentlab}{LIFA}
+		\renewcommand{\studentlab}{URIFIA}
 		\renewcommand{\doctypethesis}{Thèse de Doctorat en}
 		\renewcommand{\doctypemaster}{Mémoire de Master en}
 		\renewcommand{\losname}{Liste des Symboles}
@@ -348,13 +397,14 @@
 		\renewcommand{\myAppendixLabel}{Appendix}
 		\renewcommand{\lifa}{Laboratoire d'Informatique Fondamentale et Appliquée (LIFA)}
 		\renewcommand{\myBibliographyTitle}{Bibliography}
-				\renewcommand{\phdthesislabel}{\doctype $~$ \studentspeciality $~$, University of Dschang}
+				\renewcommand{\phdthesislabel}{PhD Thesis in $~$ \studentspeciality $~$, University of Dschang}
 		\renewcommand{\computerScience}{Computer Science}
 		\renewcommand{\mathematics}{Mathematics}
-		\renewcommand{\studentlab}{LIFA}
+		\renewcommand{\studentlab}{URIFIA}
 		\renewcommand{\doctypethesis}{PhD Thesis in}
 		\renewcommand{\doctypemaster}{Master Report in}
 		\renewcommand{\losname}{List of Symbols}
 		\renewcommand{\loaname}{List of Acronyms}
 	}
 }
+

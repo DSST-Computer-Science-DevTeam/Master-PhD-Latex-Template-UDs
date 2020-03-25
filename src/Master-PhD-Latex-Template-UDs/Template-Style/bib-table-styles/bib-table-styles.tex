@@ -40,7 +40,7 @@
 }
 
 % Tableaux
-\usepackage[format=hang,font=large,labelfont=bf,textfont=it,skip=5pt,labelsep=endash]{caption}
+\usepackage[format=hang,font=small,labelfont=bf,textfont=it,skip=5pt,labelsep=endash]{caption}
 \captionsetup[table]{name=Table,position=top}
 \captionsetup[figure]{name=Figure,position=bottom}
 \newcommand{\tocsetted}{false}
@@ -52,12 +52,21 @@
 	% Numéroter les chapitres en chiffres romains
 	\renewcommand{\thechapter}{\Roman{chapter}}
 	% Numeroter les tableaux en chiffres romains
-	\renewcommand{\thetable}{\thechapter.\Roman{table}}
+	\renewcommand{\thetable}{\Roman{table}}
+	\renewcommand{\thefigure}{\arabic{figure}}
+	
+	\counterwithout{figure}{chapter}
+	\counterwithout{table}{chapter}
 }
 
 \let\oldappendix=\appendix
 \renewcommand{\appendix}{
 	\oldappendix
 	% Numeroter les tableaux en chiffres romains
-	\renewcommand{\thetable}{\thechapter.\Roman{table}}
+	\renewcommand{\thetable}{\Roman{table}}
+	\renewcommand{\thefigure}{\arabic{figure}}
+	
+	\counterwithout{figure}{chapter}
+	\counterwithout{table}{chapter}
 }
+
