@@ -1,5 +1,4 @@
-
-\makechapterstyle{fieldset}{%
+\makechapterstyle{fieldset-rev}{%
     \renewcommand{\chapnamefont}{\LARGE\sffamily}%
     \renewcommand{\chapnumfont}{\fontsize{80pt}{0pt}\sffamily}%
     \renewcommand{\chaptitlefont}{\fontsize{25pt}{30pt}\Huge\bfseries}%
@@ -9,8 +8,10 @@
 		  \begin{center}
 			  \chaptitlefont %\hrule height 1.5pt
 			  \begin{center}\textcolor{black}{\textsc{{##1}}}\end{center}
-			  \vspace{-2mm}
-			  \textcolor{black}{\hrule height 2.5pt}%
+			  \vspace{-4mm}
+			  \textcolor{black}{\hrule height 1.5pt}%
+			  \vspace{1mm}
+			  \textcolor{black}{\hrule height 4.5pt}
 		  \end{center}
         }%
 		\renewcommand{\printchaptername}{%
