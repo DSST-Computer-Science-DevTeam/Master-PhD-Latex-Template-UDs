@@ -36,7 +36,7 @@
 \usepackage{tocbibind}
 \usepackage{multicol}
  
-\setpapersize{A4}
+%\setpapersize{A4}
 \DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
 
 \newcommand{\mathbox}[1]{\mbox{{\small \mbox{$ #1 $}}}}
@@ -121,23 +121,6 @@
 \definecolor{gray}          {cmyk}{0   , 0   , 0   , 0.50}
 \definecolor{black}         {cmyk}{0   , 0   , 0   , 1   }
 \definecolor{white}         {cmyk}{0   , 0   , 0   , 0   } 
-
-% *************** Activation des liens hypertexte ***************
-\ifpdf
-    \pdfcompresslevel=9
-        \usepackage[plainpages=false,pdfpagelabels,bookmarksnumbered,%
-        colorlinks=true,%
-        linkcolor=blue,%
-        citecolor=blue,%
-        filecolor=forestgreen,%
-        urlcolor=midnightblue,%
-        pdftex,%
-        unicode]{hyperref}
-    \pdfimageresolution=600
-    \usepackage{thumbpdf} 
-\else
-    \usepackage{hyperref}
-\fi
 
 \usepackage{memhfixc}
 

@@ -408,3 +408,45 @@
 	}
 }
 
+
+\newcommand{\documentType}[1]{
+	\ifthenelse{\equal{#1}{numerical}}
+	{
+		% *************** Activation des liens hypertexte ***************
+		\ifpdf
+			\pdfcompresslevel=9
+				\usepackage[plainpages=false,pdfpagelabels,bookmarksnumbered,%
+				colorlinks=true,%
+				linkcolor=blue,%
+				citecolor=blue,%
+				filecolor=forestgreen,%
+				urlcolor=midnightblue,%
+				pdftex,%
+				unicode]{hyperref}
+			\pdfimageresolution=600
+			\usepackage{thumbpdf} 
+		\else
+			\usepackage{hyperref}
+		\fi
+	}
+	{
+		% *************** Activation des liens hypertexte ***************
+		\ifpdf
+			\pdfcompresslevel=9
+				\usepackage[plainpages=false,pdfpagelabels,bookmarksnumbered,%
+				colorlinks=true,%
+				linkcolor=black,%
+				citecolor=black,%
+				filecolor=black,%
+				urlcolor=black,%
+				pdftex,%
+				unicode]{hyperref}
+			\pdfimageresolution=600
+			\usepackage{thumbpdf} 
+		\else
+			\usepackage{hyperref}
+		\fi
+	}
+}
+
+
