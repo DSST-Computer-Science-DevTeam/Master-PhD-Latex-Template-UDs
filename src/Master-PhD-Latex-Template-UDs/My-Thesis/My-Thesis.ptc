@@ -22,43 +22,45 @@
 \ttl@starttoc {chapters@1}
 \contentsline {section}{ \hspace {-0.55cm}La probl\'ematique \'etudi\'ee }{1}{section*.13}
 \ttl@stoptoc {chapters@1}
-\contentsline {chapter}{\chapternumberline {I}Notions d'\'edition coop\'erative et de conflits}{2}{chapter.1}
+\contentsline {part}{\partnumberline {I}Une partie}{2}{part.1}
+\contentsline {chapter}{\chapternumberline {I}Notions d'\'edition coop\'erative et de conflits}{3}{chapter.1}
 \ttl@stoptoc {chapters@1}
 \ttl@starttoc {chapters@2}
 \ttl@starttoc {chapters@2}
-\contentsline {section}{\numberline {I.1}Le travail coop\'eratif}{2}{section.1.1}
+\contentsline {section}{\numberline {I.1}Le travail coop\'eratif}{3}{section.1.1}
 \ttl@stoptoc {chapters@2}
-\contentsline {subsection}{\numberline {I.1.1}L'organisation du travail}{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {I.1.1}L'organisation du travail}{4}{subsection.1.1.1}
 \ttl@stoptoc {chapters@2}
-\contentsline {subsection}{\numberline {I.1.2}Notion de Travail Coop\'eratif Assist\'e par Ordinateur (CSCW)}{3}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {I.1.2}Notion de Travail Coop\'eratif Assist\'e par Ordinateur (CSCW)}{4}{subsection.1.1.2}
 \ttl@stoptoc {chapters@2}
-\contentsline {subsubsection}{\numberline {I.1.2.1}Les caract\'eristiques des syst\`emes de CSCW}{3}{subsubsection.1.1.2.1}
+\contentsline {subsubsection}{\numberline {I.1.2.1}Les caract\'eristiques des syst\`emes de CSCW}{4}{subsubsection.1.1.2.1}
 \ttl@stoptoc {chapters@2}
-\contentsline {subsubsection}{\numberline {I.1.2.2}Classification des syst\`emes de CSCW}{4}{subsubsection.1.1.2.2}
+\contentsline {subsubsection}{\numberline {I.1.2.2}Classification des syst\`emes de CSCW}{5}{subsubsection.1.1.2.2}
 \ttl@stoptoc {chapters@2}
 \ttl@starttoc {chapters@2}
-\contentsline {section}{\numberline {I.2}Synth\`ese}{4}{section.1.2}
+\contentsline {section}{\numberline {I.2}Synth\`ese}{5}{section.1.2}
 \ttl@stoptoc {chapters@2}
-\contentsline {chapter}{\chapternumberline {II}L'\'edition coop\'erative des documents structur\'es}{5}{chapter.2}
-\contentsline {chapter}{\chapternumberline {III}Fusion consensuelle des mises \`a jour des r\'epliques partielles}{6}{chapter.3}
-\contentsline {chapter}{\chapternumberline {IV}Un prototype d'\'editeur coop\'eratif d\'esynchronis\'e (TinyCE v2)}{7}{chapter.4}
-\contentsline {chapter}{ \hspace {-0.25cm}Conclusion g\'en\'erale }{8}{chapter*.16}
+\contentsline {chapter}{\chapternumberline {II}L'\'edition coop\'erative des documents structur\'es}{6}{chapter.2}
+\contentsline {part}{\partnumberline {II}Une autre partie}{7}{part.2}
+\contentsline {chapter}{\chapternumberline {III}Fusion consensuelle des mises \`a jour des r\'epliques partielles}{8}{chapter.3}
+\contentsline {chapter}{\chapternumberline {IV}Un prototype d'\'editeur coop\'eratif d\'esynchronis\'e (TinyCE v2)}{9}{chapter.4}
+\contentsline {chapter}{ \hspace {-0.25cm}Conclusion g\'en\'erale }{10}{chapter*.18}
 \ttl@stoptoc {chapters@2}
 \ttl@starttoc {chapters@3}
 \ttl@starttoc {chapters@3}
-\contentsline {section}{ \hspace {-0.55cm}La probl\'ematique \'etudi\'ee et les choix m\'ethodologiques }{8}{section*.17}
+\contentsline {section}{ \hspace {-0.55cm}La probl\'ematique \'etudi\'ee et les choix m\'ethodologiques }{10}{section*.19}
 \ttl@stoptoc {chapters@3}
 \ttl@starttoc {chapters@3}
-\contentsline {section}{ \hspace {-0.55cm}Analyse critique des r\'esultats obtenus }{8}{section*.18}
+\contentsline {section}{ \hspace {-0.55cm}Analyse critique des r\'esultats obtenus }{10}{section*.20}
 \ttl@stoptoc {chapters@3}
 \ttl@starttoc {chapters@3}
-\contentsline {section}{ \hspace {-0.55cm}Quelques perspectives }{8}{section*.19}
+\contentsline {section}{ \hspace {-0.55cm}Quelques perspectives }{10}{section*.21}
 \ttl@stoptoc {chapters@3}
-\contentsline {chapter}{ \hspace {-0.25cm}Bibliography }{9}{chapter*.20}
-\contentsline {appendix}{\chapternumberline {A}Un autre exemple complet de fusion consensuelle}{10}{appendix.A}
+\contentsline {chapter}{ \hspace {-0.25cm}Bibliography }{11}{chapter*.22}
+\contentsline {appendix}{\chapternumberline {A}Un autre exemple complet de fusion consensuelle}{12}{appendix.A}
 \ttl@starttoc {chapters@3}
 \ttl@stoptoc {chapters@3}
-\contentsline {appendix}{\chapternumberline {B}Quelques fonctions Haskell pour le calcul des consensus}{11}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}Quelques fonctions Haskell pour le calcul des consensus}{13}{appendix.B}
 \ttl@starttoc {chapters@3}
 \ttl@stoptoc {chapters@3}
 \contentsfinish

@@ -12,6 +12,12 @@
 	$\mathpzc{{#1}}~\RHD$}
 }
 
+\renewcommand{\partnumberline}[1]{
+% Impression du texte partie
+\hspace{-0.4cm}\textbf{
+	\myPartLabel $\,$ #1 $\,$--$\,$}
+}
+
 \newcommand{\lof}{false}
 \renewcommand{\numberline}[1]{
 \ifthenelse{\equal{\lof}{false}}{\hspace{-0.6cm}$\mathrm{{#1}}$ -} {$\mathrm{{#1}}$ -}
