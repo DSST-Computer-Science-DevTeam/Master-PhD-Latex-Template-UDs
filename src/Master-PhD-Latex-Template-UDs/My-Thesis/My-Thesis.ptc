@@ -1,5 +1,4 @@
 \changetocdepth {3}
-\changetocdepth {3}
 \select@language {english}
 \contentsline {section}{ \hspace {-0.55cm}D\'edicaces }{ii}{chapter*.2}
 \contentsline {section}{ \hspace {-0.55cm}Remerciements }{iii}{chapter*.3}
@@ -22,7 +21,7 @@
 \ttl@starttoc {chapters@1}
 \contentsline {section}{ \hspace {-0.55cm}La probl\'ematique \'etudi\'ee }{1}{section*.13}
 \ttl@stoptoc {chapters@1}
-\contentsline {part}{\partnumberline {I}Une partie}{2}{part.1}
+\contentsline {part}{\partnumberline {I}A part}{2}{part.1}
 \contentsline {chapter}{\chapternumberline {I}Notions d'\'edition coop\'erative et de conflits}{3}{chapter.1}
 \ttl@stoptoc {chapters@1}
 \ttl@starttoc {chapters@2}
@@ -41,7 +40,7 @@
 \contentsline {section}{\numberline {I.2}Synth\`ese}{5}{section.1.2}
 \ttl@stoptoc {chapters@2}
 \contentsline {chapter}{\chapternumberline {II}L'\'edition coop\'erative des documents structur\'es}{6}{chapter.2}
-\contentsline {part}{\partnumberline {II}Une autre partie}{7}{part.2}
+\contentsline {part}{\partnumberline {II}Another part}{7}{part.2}
 \contentsline {chapter}{\chapternumberline {III}Fusion consensuelle des mises \`a jour des r\'epliques partielles}{8}{chapter.3}
 \contentsline {chapter}{\chapternumberline {IV}Un prototype d'\'editeur coop\'eratif d\'esynchronis\'e (TinyCE v2)}{9}{chapter.4}
 \contentsline {chapter}{ \hspace {-0.25cm}Conclusion g\'en\'erale }{10}{chapter*.18}
